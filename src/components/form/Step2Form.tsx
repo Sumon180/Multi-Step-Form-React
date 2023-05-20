@@ -45,6 +45,7 @@ const Step2Form: React.FC<Step2FormProps> = ({
         name="email"
         value={email}
         onChange={handleInputChange}
+        required
         className="w-full border border-gray-300 rounded-md p-2 mb-4"
       />
 
@@ -54,6 +55,7 @@ const Step2Form: React.FC<Step2FormProps> = ({
         name="password"
         value={password}
         onChange={handleInputChange}
+        required
         className="w-full border border-gray-300 rounded-md p-2 mb-4"
       />
 

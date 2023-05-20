@@ -45,6 +45,7 @@ const Step1Form: React.FC<Step1FormProps> = ({
         name="firstName"
         value={firstName}
         onChange={handleInputChange}
+        required
         className="w-full border border-gray-300 rounded-md p-2 mb-4"
       />
 
@@ -54,6 +55,7 @@ const Step1Form: React.FC<Step1FormProps> = ({
         name="lastName"
         value={lastName}
         onChange={handleInputChange}
+        required
         className="w-full border border-gray-300 rounded-md p-2 mb-4"
       />
 
