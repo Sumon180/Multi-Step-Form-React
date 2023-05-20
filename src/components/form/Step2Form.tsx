@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from "aos"
 import 'aos/dist/aos.css';
+import FormCard from './FormCard';
 
 type Step2FormProps = {
   formData: {
@@ -38,7 +39,7 @@ const Step2Form: React.FC<Step2FormProps> = ({
   }, []);
 
   return (
-    <div className=' bg-white px-10 py-5 rounded-md' data-aos="fade-down">
+    <FormCard>
       <label className="block mb-2">Email</label>
       <input
         type="email"
@@ -73,7 +74,8 @@ const Step2Form: React.FC<Step2FormProps> = ({
           Next
         </button>
       </div>
-    </div>
+    </FormCard>
+
   );
 };
 

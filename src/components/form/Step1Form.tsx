@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import FormCard from './FormCard';
 
 type Step1FormProps = {
   formData: {
@@ -38,34 +39,37 @@ const Step1Form: React.FC<Step1FormProps> = ({
   }, []);
 
   return (
-    <div className=' bg-white px-10 py-5 rounded-md' data-aos="fade-down">
-      <label className="block mb-2">First Name</label>
-      <input
-        type="text"
-        name="firstName"
-        value={firstName}
-        onChange={handleInputChange}
-        required
-        className="w-full border border-gray-300 rounded-md p-2 mb-4"
-      />
+    <>
+      <FormCard>
+        <label className="block mb-2">First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          value={firstName}
+          onChange={handleInputChange}
+          required
+          className="w-full border border-gray-300 rounded-md p-2 mb-4"
+        />
 
-      <label className="block mb-2">Last Name</label>
-      <input
-        type="text"
-        name="lastName"
-        value={lastName}
-        onChange={handleInputChange}
-        required
-        className="w-full border border-gray-300 rounded-md p-2 mb-4"
-      />
+        <label className="block mb-2">Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          value={lastName}
+          onChange={handleInputChange}
+          required
+          className="w-full border border-gray-300 rounded-md p-2 mb-4"
+        />
 
-      <button
-        onClick={handleNext}
-        className="bg-blue-500 text-white rounded-md px-4 py-2"
-      >
-        Next
-      </button>
-    </div>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white rounded-md px-4 py-2"
+        >
+          Next
+        </button>
+      </FormCard>
+
+    </>
   );
 };
 

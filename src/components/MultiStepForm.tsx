@@ -79,8 +79,6 @@ const MultiStepForm: React.FC = () => {
     return (
         <div className="max-w-lg mx-auto">
             <ProgressBar totalSteps={3} currentStep={currentStep} />
-
-            <h1 className='text-3xl text-center mb-3'>Form Fill-Up</h1>
             <form onSubmit={handleSubmit}>
                 {renderFormStep()}
             </form>
