@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Step1Form from '../components/form/Step1Form';
 import Step2Form from '../components/form/Step2Form';
 import Step3Form from '../components/form/Step3Form';
@@ -30,7 +32,7 @@ const MultiStepForm: React.FC = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
         console.log(formData);
-
+        toast.success('Form submitted successfully!');
         // Handle form submission here
     };
 
@@ -77,12 +79,12 @@ const MultiStepForm: React.FC = () => {
     return (
         <div className="max-w-lg mx-auto">
             <ProgressBar totalSteps={3} currentStep={currentStep} />
-           
-                <h1 className='text-3xl text-center mb-3'>Form Fill-Up</h1>
-                <form onSubmit={handleSubmit}>
-                    {renderFormStep()}
-                </form>
-            
+
+            <h1 className='text-3xl text-center mb-3'>Form Fill-Up</h1>
+            <form onSubmit={handleSubmit}>
+                {renderFormStep()}
+            </form>
+            <ToastContainer />
         </div>
     );
 };
